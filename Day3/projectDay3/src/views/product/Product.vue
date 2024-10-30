@@ -29,7 +29,7 @@ const itemCount = ref(countItemsInCart());
     <div class="mt-16 bg-white pt-3">
         <section>
             <h2 class="text-3xl text-center mb-7">Danh sách các sản phẩm</h2>
-            <div class="flex flex-wrap gap-4 px-4">
+            <div class="flex flex-wrap gap-4 px-4 pb-5">
                 <div v-for="(item, id) in store.products" :key="id"
                     class="flex flex-col gap-2 text-xs p-4 border-slate-900 border-[1px] rounded-md">
                     <img class="w-36 self-center border-slate-300 border-[1px] rounded-md" :src="item.imageUrl"
@@ -46,9 +46,6 @@ const itemCount = ref(countItemsInCart());
                         Xem sản phẩm
                     </router-link>
                 </div>
-            </div>
-            <div class="text-center mt-4">
-                <p>Số lượng sản phẩm trong giỏ: {{ itemCount }}</p>
             </div>
         </section>
     </div>
